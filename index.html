@@ -4,8 +4,6 @@
     <title>Shopping List Check Off</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <script src="angular.min.js"></script>
-    <script src="app.js"></script>
 
     <style>
       .emptyMessage {
@@ -32,14 +30,14 @@
   <div class="row">
 
     <!-- To Buy List -->
-    <div class="col-md-6" ng-controller"ToBuyController as ctrl1">
+    <div class="col-md-6" ng-controller="ToBuyController as ctrl1">
      <h2>To Buy:</h2>
      <ul>
        <li ng-repeat="item in ctrl1.items"> Buy {{item.quantity}} {{item.name}}
-         <button class "btn btn-default" ng-click"ctrl1.buyClick(item);">
-           <span class="glyphicon glyphicon-ok"> </span> Bought </button> </li>
+          <button class= "btn btn-default" ng-click="ctrl1.buyClick(item);">
+            <span class="glyphicon glyphicon-ok"> </span> Bought </button> </li>
         </ul>
-     <div class="emptyMessage" ng-if ="ctrl1.items.length==0">Everything is bought!</div>
+     <div class="emptyMessage" ng-if ="ctrl1.items.length == 0">Everything is bought!</div>
     </div>
 
     <!-- Already Bought List -->
@@ -52,6 +50,8 @@
     </div>
   </div>
 </div>
+<script src="angular.min.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>
